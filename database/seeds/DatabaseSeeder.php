@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         // run seeder >= php artisan db:seed
         // llama al ProductSeeder
-         $this->call(ProductSeeder::class);
+        $this->call(CategorySeeder::class);
+        $this->call(ProductSeeder::class);
     }
 }
