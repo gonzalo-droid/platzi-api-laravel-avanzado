@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         // run seeder >= php artisan db:seed
         // llama al ProductSeeder
+        factory(User::class, 10)->create();
         $this->call(CategorySeeder::class);
         $this->call(ProductSeeder::class);
     }
